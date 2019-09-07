@@ -1,0 +1,9 @@
+package com.iweb.o2o.exception;
+
+/**
+ * @Auter : Xuyong
+ * @Date : 2019/9/4 14:02
+ * Description:
+ */
+public class O2OException {
+}

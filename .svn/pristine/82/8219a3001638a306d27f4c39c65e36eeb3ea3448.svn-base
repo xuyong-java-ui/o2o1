@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="jquery-3.3.1" type="kotlin.js">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/src/main/resources/static/js/jquery-3.3.1.js" />
+      <root url="file://$PROJECT_DIR$/src/main/resources/static/js/echarts.min.js" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,15 @@
+package com.iweb.o2o.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+/**
+ * @Auter : Xuyong
+ * @Date : 2019/9/4 13:58
+ * Description:
+ */
+@Controller
+@RequestMapping("shop/area")
+public class AreaController {
+
+}

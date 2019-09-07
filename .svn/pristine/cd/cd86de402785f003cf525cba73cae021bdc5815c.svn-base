@@ -1,0 +1,40 @@
+package com.iweb.o2o.service.impl;
+
+import com.iweb.o2o.entity.LocalAuth;
+import com.iweb.o2o.service.LocalAuthService;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.util.DigestUtils;
+
+/**
+ * @Auter : Xuyong
+ * @Date : 2019/9/4 20:20
+ * Description:
+ */
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class UserServiceImplTest {
+    @Autowired
+    private LocalAuthService localAuthService;
+
+    @Test
+    public void getUserById() {
+        System.out.println("=====>"+localAuthService.getUserById("admin"));
+    }
+
+    @Test
+    public void regist() {
+        LocalAuth localAuth = new LocalAuth();  //前台页面传递过来的username和pwd
+        localAuth.setUserName("swk");
+        localAuth.setPassword("123456");
+        //密码要加密保存
+        String pwd = localAuth.getPassword();   //应该是Controller中的步骤
+        //加密
+        String newPwd = DigestUtils.md5DigestAsHex(pwd.getBytes());
+        localAuth.setPassword(newPwd);
+        localAuthService.regist(localAuth);
+    }
+}

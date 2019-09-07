@@ -1,0 +1,12 @@
+package com.iweb.o2o.utils;
+
+/**
+ * @Auter : Xuyong
+ * @Date : 2019/9/4 14:06
+ * Description:该接口，我们定义系统常量
+ * 定义接口的目的：是可以省略public  static final
+ */
+public interface SysConstants {
+    String SESSION_USER = "user";
+    String SESSION_PERSONINFO = "personInfo";
+}

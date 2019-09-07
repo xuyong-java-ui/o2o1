@@ -1,0 +1,34 @@
+package com.iweb.o2o.controller;
+
+import com.iweb.o2o.entity.Area;
+import com.iweb.o2o.service.AreaService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
+
+/**
+ * @Auter : Xuyong
+ * @Date : 2019/9/4 13:58
+ * Description:
+ */
+@Controller
+@RequestMapping("/shop/area")
+public class AreaController {
+    @Autowired
+    private AreaService areaService;
+
+    /**
+     * 返回列表数据
+     * @return
+     */
+    @GetMapping("/list")
+    @ResponseBody
+    public Object getAreas(){
+        List<Area> areas = areaService.getAreas();
+        return areas;
+    }
+}

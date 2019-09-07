@@ -1,0 +1,9 @@
+package com.iweb.o2o.service.impl;
+
+/**
+ * @Auter : Xuyong
+ * @Date : 2019/9/4 14:05
+ * Description:
+ */
+public class LocalAuthServiceImpl {
+}

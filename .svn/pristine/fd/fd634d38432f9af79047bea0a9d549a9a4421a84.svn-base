@@ -1,0 +1,19 @@
+package com.iweb.o2o.service;
+
+import com.iweb.o2o.entity.LogLogin;
+import org.springframework.stereotype.Repository;
+
+/**
+ * @Auter : Xuyong
+ * @Date : 2019/9/4 14:05
+ * Description:
+ */
+@Repository
+public interface LogLoginService {
+    /**
+     * 插入一条登录日志
+     * @param logLogin
+     * @return
+     */
+    int addLogInfo(LogLogin logLogin);
+}

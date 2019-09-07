@@ -1,0 +1,9 @@
+package com.iweb.o2o.enums;
+
+/**
+ * @Auter : Xuyong
+ * @Date : 2019/9/4 14:01
+ * Description:
+ */
+public class PersonInfoFlag {
+}

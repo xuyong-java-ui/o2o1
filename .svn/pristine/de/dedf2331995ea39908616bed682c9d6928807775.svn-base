@@ -1,0 +1,9 @@
+package com.iweb.o2o.mapper;
+
+/**
+ * @Auter : Xuyong
+ * @Date : 2019/9/4 14:03
+ * Description:
+ */
+public interface LogInfoMapper {
+}

@@ -1,0 +1,16 @@
+package com.iweb.o2o.mapper;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.iweb.o2o.entity.Area;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+/**
+ * @Auter : Xuyong
+ * @Date : 2019/9/4 14:02
+ * Description:
+ */
+@Repository
+public interface AreaMapper extends BaseMapper<Area> {
+}

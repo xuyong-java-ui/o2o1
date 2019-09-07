@@ -1,0 +1,17 @@
+package com.iweb.o2o.entity;
+
+import lombok.Data;
+
+import java.util.Date;
+
+@Data
+public class LogLogin {
+    private Integer id;
+
+    private String loginname;
+
+    private String loginip;
+
+    private Date logintime;
+
+}

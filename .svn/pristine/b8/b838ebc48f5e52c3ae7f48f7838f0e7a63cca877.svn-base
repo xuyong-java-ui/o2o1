@@ -1,0 +1,139 @@
+package com.iweb.o2o.controller;
+
+import com.google.code.kaptcha.Constants;
+import com.iweb.o2o.entity.LocalAuth;
+import com.iweb.o2o.entity.LogLogin;
+import com.iweb.o2o.entity.PersonInfo;
+import com.iweb.o2o.service.LocalAuthService;
+import com.iweb.o2o.service.LogLoginService;
+import com.iweb.o2o.service.PersonInfoService;
+import com.iweb.o2o.utils.SysConstants;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.http.HttpSession;
+import java.util.Date;
+
+
+/**
+ * @Auter : Xuyong
+ * @Date : 2019/9/4 14:00
+ * Description:
+ */
+@Controller
+@RequestMapping("/shop")
+public class LocalAuthController {
+    @Autowired
+    private LocalAuthService localAuthService;
+
+    @Autowired
+    private PersonInfoService personInfoService;
+
+    @Autowired
+    private LogLoginService logLoginService;
+
+    /**
+     * 跳转到登录界面
+     * @return
+     */
+    @GetMapping("/login.html")
+    public String toLogin(){
+        return "login";
+    }
+
+    /**
+     * 跳转到注册界面
+     * @return
+     */
+    @GetMapping("/register.html")
+    public String toRegist(){
+        return "regist";
+    }
+
+
+    public String login(LocalAuth localAuth, HttpSession session,String code){
+        //登录处理
+        LocalAuth loginUser = localAuthService.login(localAuth);
+        //TODO 5.加入验证码 ===============start ========================
+        //1.获取Kaptcha生成的
+        String sessCode = (String)session.getAttribute(Constants.KAPTCHA_SESSION_KEY);
+        //一次性验证码  ===获取完之后，移除
+        session.removeAttribute(Constants.KAPTCHA_SESSION_KEY);
+        //2.跟我们自己传的进行比对
+        if (code.equalsIgnoreCase(sessCode)){
+            if (loginUser!=null){
+                //表明登录成功
+                //TODO 1.查询出PersonInfo的信息
+                // 只需要将loginUser的user_id作为PersonInfo的查询条件即可
+                PersonInfo personInfo = new PersonInfo();
+                personInfo.setUserId(loginUser.getUserId());
+                personInfo= personInfoService.getPersonInfo(personInfo);
+
+                //TODO 2.将loginUser和personInfo放入到session中
+                //固定的键，一般定义为常量
+                session.setAttribute(SysConstants.SESSION_USER,loginUser);
+                session.setAttribute(SysConstants.SESSION_PERSONINFO,personInfo);
+                //TODO 3.登录日志表中插入一条数据
+                // ①ip地址如何获取？ ②loginname：username-name
+                LogLogin logLogin = new LogLogin();
+                logLogin.setLoginname(loginUser.getUserName()+"-"+personInfo.getName());
+                logLogin.setLoginip("");
+                //new SimpleDateFormat("").format(new Date()); 将日期变为字符串
+                logLogin.setLogintime(new Date());
+
+                //应该包含在try -catch块中，使用自定义异常
+                logLoginService.addLogInfo(logLogin);
+                //throw new O2OException("ddd");
+
+                //TODO 4.应该是根据用户角色，显示对应的菜单 ==暂且写死
+
+                //上述都没问题，跳转到index,应该在try块中
+                return "index";
+            } else {
+                //登录失败，回到登录页面：用户名或密码错误
+                return "redirect:login.html";
+            }
+        } else {
+            //验证码错误
+            return "redirect:login.html";
+        }
+        //TODO 验证码 ==============================end =========================
+//        if(loginUser != null) {
+//            //表明登录成功
+//            //TODO 1.查询出PersonInfo的信息
+//            // 只需要将loginUser的user_id作为PersonInfo的查询条件即可
+//            PersonInfo personInfo = new PersonInfo();
+//            personInfo.setUserId(loginUser.getUserId());
+//            personInfo = personInfoService.getPersonInfo(personInfo);
+//
+//            //TODO 2.将loginUser和personInfo放入到session中
+//            //固定的键，一般定义为常量
+//            session.setAttribute(SysConstants.SESSION_USER,loginUser);
+//            session.setAttribute(SysConstants.SESSION_PERSONINFO,personInfo);
+//
+//            //TODO 3.登录日志表中插入一条数据
+//            // ①ip地址如何获取？ ②loginname：username-name
+//            LogInfo logInfo = new LogInfo();
+//            logInfo.setLoginname(loginUser.getUserName()+"-"+personInfo.getName());
+//            logInfo.setLoginip("");
+//            //new SimpleDateFormat("").format(new Date()); 将日期变为字符串
+//            logInfo.setLogintime(new Date());
+//
+//            //应该包含在try -catch块中，使用自定义异常
+//            logInfoService.addLogInfo(logInfo);
+//            //throw new O2OException("ddd");
+//
+//            //TODO 4.应该是根据用户角色，显示对应的菜单 ==暂且写死
+//
+//            //上述都没问题，跳转到index,应该在try块中
+//            return "index";
+//        } else {
+//            //登录失败，回到登录页面
+//            return "redirect:login.html";
+//        }
+
+    }
+
+}

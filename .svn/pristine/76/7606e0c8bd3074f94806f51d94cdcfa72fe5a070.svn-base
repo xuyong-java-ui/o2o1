@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="544333e7-a6c4-497e-a211-557bc3977f5c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_54.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_ulisesbocchio_jasypt_spring_boot_1_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_ulisesbocchio_jasypt_spring_boot_starter_1_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jasypt_jasypt_1_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/config/RedisCacheConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/controller/shop" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/controller/shop/FileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/controller/superadmin" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/controller/sys" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/controller/sys/LogLoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/enums/CodeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/enums/OrderStatusEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/enums/PayStatusEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/enums/ProductStatusEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/enums/ResultEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/mapper/shop" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/mapper/shop/ShopAuthMapMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/mapper/sys" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/mapper/sys/MenuMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/mapper/sys/NewsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/service/ShopAuthMapService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/service/impl/shopAuthMapServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/utils/AppFileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/utils/RandomUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/utils/RedisUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/utils/ResultObj.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/vo/LogLoginVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/vo/ProductVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/file.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/AreaMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/common/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/common/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/common/left.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/common/right.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/category" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/category/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/chart" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/chart/money.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/chart/order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/chart/top5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/info" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/info/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/info/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/order" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/order/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/user" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/user/personInfo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/iweb/o2o/JasyptTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/iweb/o2o/RedisTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/iweb/o2o/service/impl/AreaServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/iweb/o2o/service/impl/LocalAuthServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/o2o.iml" beforeDir="false" afterPath="$PROJECT_DIR$/o2o.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/controller/AreaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/controller/superadmin/AreaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/controller/CodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/controller/shop/CodeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/controller/LocalAuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/controller/shop/LocalAuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/controller/shop/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/controller/WorkBenchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/controller/shop/WorkBenchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/entity/LocalAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/entity/LocalAuth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/entity/LogLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/entity/LogLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/entity/PersonInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/entity/PersonInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/entity/ShopAuthMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/entity/ShopAuthMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/exception/O2OException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/exception/O2OException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/mapper/AreaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/mapper/shop/AreaMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/mapper/LocalAuthMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/mapper/shop/LocalAuthMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/mapper/LogLoginMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/mapper/sys/LogLoginMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/mapper/PersonInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/mapper/shop/PersonInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/mapper/shop/ProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/service/AreaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/service/AreaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/service/LocalAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/service/LocalAuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/service/LogLoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/service/LogLoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/service/PersonInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/service/PersonInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/service/impl/AreaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/service/impl/AreaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/service/impl/LocalAuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/service/impl/LocalAuthServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/service/impl/LogLoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/service/impl/LogLoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/service/impl/PersonInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/service/impl/PersonInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/utils/SysConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iweb/o2o/utils/SysConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product" beforeDir="true" afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/product" afterDir="true" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/regist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/regist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/shop/product/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/shop/product/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iweb/o2o/service/impl/ProductServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/iweb/o2o/service/impl/UserServiceImplTest.java" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1QLyaI7oZCVOY8bENp4JvIeMKxz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="2" id="Remove" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/shop/chart" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\XuYong\java\o2o\src\main\resources\templates\shop" />
+      <recent name="D:\XuYong\java\o2o\src\main\resources\templates" />
+      <recent name="D:\XuYong\java\o2o\src\main\resources\static" />
+      <recent name="D:\XuYong\java\o2o" />
+      <recent name="D:\XuYong\java\o2o\src\main\java\com\iweb\o2o" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\XuYong\java\o2o\src\main\resources\templates\shop\chart" />
+      <recent name="D:\XuYong\java\o2o\src\main\resources\templates\shop\order" />
+      <recent name="D:\XuYong\java\o2o\src\main\resources\templates\shop\user" />
+      <recent name="D:\XuYong\java\o2o\src\main\resources\templates\shop\info" />
+      <recent name="D:\XuYong\java\o2o\src\main\resources\templates\shop\category" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.iweb.o2o.controller.shop" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.O2oApplication">
+    <configuration name="Mbg_GeneratorUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.iweb.o2o.mbg.Mbg_GeneratorUtil" />
+      <module name="o2o" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iweb.o2o.mbg.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceImplTest.getDataGridView" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="o2o" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iweb.o2o.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.iweb.o2o.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.iweb.o2o.service.impl.ProductServiceImplTest" />
+      <option name="METHOD_NAME" value="getDataGridView" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="o2o" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iweb.o2o.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.iweb.o2o.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.iweb.o2o.service.impl.UserServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceImplTest.getUserById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="o2o" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iweb.o2o.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.iweb.o2o.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.iweb.o2o.service.impl.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="getUserById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceImplTest.regist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="o2o" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.iweb.o2o.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.iweb.o2o.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.iweb.o2o.service.impl.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="regist" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="O2oApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="o2o" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.iweb.o2o.O2oApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Mbg_GeneratorUtil" />
+      <item itemvalue="JUnit.ProductServiceImplTest.getDataGridView" />
+      <item itemvalue="JUnit.UserServiceImplTest" />
+      <item itemvalue="JUnit.UserServiceImplTest.getUserById" />
+      <item itemvalue="JUnit.UserServiceImplTest.regist" />
+      <item itemvalue="Spring Boot.O2oApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ProductServiceImplTest.getDataGridView" />
+        <item itemvalue="JUnit.UserServiceImplTest.regist" />
+        <item itemvalue="JUnit.UserServiceImplTest" />
+        <item itemvalue="JUnit.UserServiceImplTest.getUserById" />
+        <item itemvalue="Application.Mbg_GeneratorUtil" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <option name="contentProportion" value="0.24550484" />
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3dafb530" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3dafb530" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@27f31d95" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\24386\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\XuYong\java\o2o" />
+          <option name="myCopyRoot" value="D:\XuYong\java\o2o" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="D:\XuYong\java\o2o" />
+          <option name="myCopyRoot" value="D:\XuYong\java\o2o" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="544333e7-a6c4-497e-a211-557bc3977f5c" name="Default Changelist" comment="" />
+      <created>1567564232432</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567564232432</updated>
+      <workItem from="1567564233651" duration="5041000" />
+      <workItem from="1567569558462" duration="1915000" />
+      <workItem from="1567576522524" duration="7625000" />
+      <workItem from="1567585337630" duration="148000" />
+      <workItem from="1567585505354" duration="1203000" />
+      <workItem from="1567596703813" duration="10407000" />
+      <workItem from="1567643679298" duration="22492000" />
+      <workItem from="1567676204235" duration="10056000" />
+      <workItem from="1567730196685" duration="2937000" />
+    </task>
+    <task id="LOCAL-00001">
+      <created>1567576510953</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1567576510953</updated>
+    </task>
+    <task id="LOCAL-00002">
+      <created>1567577257778</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1567577257778</updated>
+    </task>
+    <task id="LOCAL-00003">
+      <created>1567599989274</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1567599989274</updated>
+    </task>
+    <task id="LOCAL-00004">
+      <created>1567651284753</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1567651284753</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+</project>
