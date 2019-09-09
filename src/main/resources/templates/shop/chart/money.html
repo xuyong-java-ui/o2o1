@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>交易额统计</title>
-    <script type="text/javascript" th:src="@{/static/js/jquery-3.1.0.js}"></script>
+    <script type="text/javascript" th:src="@{/static/js/jquery-3.3.1.js}"></script>
     <link rel="stylesheet" th:href="@{/static/layui/css/layui.css}">
     <script type="text/javascript" th:src="@{/static/js/echarts.min.js}"></script>
 </head>
@@ -18,7 +18,7 @@
         <div class="layui-inline">
             <label class="layui-form-label">月报:</label>
             <div class="layui-input-inline">
-                <input type="text" name="nonth" id="month"  readonly="readonly" autocomplete="off" class="layui-input" placeholder="yyyy-MM">
+                <input type="text" name="month" id="month"  readonly="readonly" autocomplete="off" class="layui-input" placeholder="yyyy-MM">
             </div>
         </div>
 
@@ -45,9 +45,10 @@
 
 </form>
 <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-<div id="main" style="width: 800px;height:450px;align-items: center;"></div>
+<div id="main" style="width: 900px;height:450px;align-items: center;"></div>
 <script th:src="@{/static/layui/layui.js}"></script>
 <script type="text/javascript">
+    var context = [[@{/}]];	//获取项目名称
     layui.use(['jquery', 'layer', 'form', 'laydate'],function () {
         var $ = layui.jquery;
         var layer = layui.layer;
@@ -64,28 +65,53 @@
         });
         laydate.render({
             elem:'#endTime'
-        })
+        });
 
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('main'));
+        //带查询条件的数据请求
+        function getData(url,params) {
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('main'));
+            var xData = new Array();
+            var yData = new Array();
+            //发送Ajax请求
+            $.getJSON(url,params,function (data) {
+                $(data).each(function () {
+                    xData.push(this.order_time);
+                    yData.push(parseFloat(this.total_amount));
+                });
+                // 指定图表的配置项和数据
+                var option = {
+                    xAxis: {
+                        type: 'category',
+                        data: xData
+                    },
+                    yAxis: {
+                        type: 'value'
+                    },
+                    series: [{
+                        data: yData,
+                        type: 'line',
+                        // 显示数值
+                        itemStyle : { normal: {label : {show: true}}}
+                    }]
+                };
 
-        // 指定图表的配置项和数据
-        var option = {
-            xAxis: {
-                type: 'category',
-                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-            },
-            yAxis: {
-                type: 'value'
-            },
-            series: [{
-                data: [820, 932, 901, 934, 1290, 1330, 1320],
-                type: 'line'
-            }]
-        };
+                // 使用刚指定的配置项和数据显示图表。
+                myChart.setOption(option);
+            });
+        }
 
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
+        getData(context+"shop/chart/money");
+
+        $("#doSearch").click(function () {
+            //获取请求参数
+            var params = {
+                "month":$("#month").val(),
+                "startTime":$("#startTime").val(),
+                "endTime":$("#endTime").val()
+            }
+            getData(context+"shop/chart/money",params);
+        });
     })
 
 </script>

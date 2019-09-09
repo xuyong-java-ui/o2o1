@@ -43,15 +43,14 @@ public class ChartController {
     public Object getTop5Product(@RequestParam(value = "month", required = false) String month,
                                  @RequestParam(value = "startTime", required = false) String startTime,
                                  @RequestParam(value = "endTime", required = false) String endTime) {
+        //从订单表中明细表中，按照商品id，汇总统计
         Map<String, String> map = new HashMap<>();
-        map.put("month", month);
-        map.put("startTime", startTime);
-        map.put("endTime", endTime);
-//        List<Map<String, Object>> top5Product = chartService.getTop5Product(map);
-        Map<String, Object> xymap = new HashMap<>();
-        xymap.put("x", "X轴名字");
-        xymap.put("y", 10);
-        return xymap;
+        map.put("month",month);
+        map.put("startTime",startTime);
+        map.put("endTime",endTime);
+
+        List<Map<String, Object>> top5Product = chartService.getTop5Product(map);
+        return top5Product;
     }
 
 
@@ -77,7 +76,7 @@ public class ChartController {
         map.put("month", month);
         map.put("startTime", startTime);
         map.put("endTime", endTime);
-        Map<String, Integer> money = (Map<String, Integer>) chartService.getMonet(map);
+        List<Map<String, Object>> money = chartService.getMoney(map);
         return money;
     }
 }

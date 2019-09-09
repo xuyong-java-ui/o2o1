@@ -23,14 +23,12 @@ public class ChartServiceImpl implements ChartService {
     }
 
     @Override
-    public Map<String, Integer> getOrderStatus(Map<String, String> map) {
-        return chartMapper.getOrderStatus(map);
-    }
-
-    @Override
-    public List<Map<String, Object>> getMonet(Map<String, String> map) {
+    public List<Map<String, Object>> getMoney(Map<String, String> map) {
         return chartMapper.getMoney(map);
     }
 
-
+    @Override
+    public Map<String, Integer> getOrderStatus(Map<String, String> map) {
+        return chartMapper.getOrderStatus(map);
+    }
 }

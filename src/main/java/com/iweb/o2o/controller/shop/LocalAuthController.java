@@ -189,8 +189,4 @@ public class LocalAuthController {
     public String toPersonInfo() {
         return "shop/user/personInfo";
     }
-
-
-
-
 }

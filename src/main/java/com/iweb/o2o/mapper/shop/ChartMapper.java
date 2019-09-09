@@ -14,7 +14,25 @@ import java.util.Map;
  */
 @Repository
 public interface ChartMapper{
-    List<Map<String, Object>> getTop5Product(Map<String, String> map);
-    Map<String, Integer> getOrderStatus(Map<String, String> map);
-    List<Map<String, Object>> getMoney(Map<String, String> map);
+
+    /**
+     * 商品热销top5
+     * @param map
+     * @return
+     */
+    List<Map<String,Object>> getTop5Product(Map<String,String> map);
+
+    /**
+     * 获取订单金额
+     * @param map
+     * @return
+     */
+    List<Map<String,Object>> getMoney(Map<String,String> map);
+
+    /**
+     * 订单状态分布分析
+     * @param map
+     * @return
+     */
+    Map<String,Integer> getOrderStatus(Map<String,String> map);
 }

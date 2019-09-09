@@ -20,7 +20,7 @@ import java.util.Date;
  * Description:
  */
 @RestController
-@RequestMapping("sys/news")
+@RequestMapping("/news")
 public class NewsController {
     @Autowired
     private NewsService newsService;

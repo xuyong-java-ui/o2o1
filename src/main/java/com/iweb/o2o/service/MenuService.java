@@ -4,6 +4,7 @@ import com.iweb.o2o.entity.Menu;
 import com.iweb.o2o.utils.DataGridView;
 import com.iweb.o2o.vo.MenuVo;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -12,48 +13,50 @@ import java.util.List;
  * @Date : 2019/9/7 9:13
  * Description:
  */
-@Repository
+@ResponseBody
 public interface MenuService {
     /**
-     * 查询所有菜单返回
+     * 查询所有菜单【带查询条件】
      * List<Menu>
      */
-    public List<Menu> queryAllMenuForList(MenuVo menuVo);
+    List<Menu> queryAllMenuForList(MenuVo menuVo);
 
     /**
      * 根据用户id查询用户的可用菜单
      */
-    public List<Menu> queryMenuByUserIdForList(MenuVo menuVo, Integer userId);
+    List<Menu> queryMenuByUserIdForList(MenuVo menuVo, Long userId);
 
     /**
      * 查询所有菜单
      * @param menuVo
+     * @param pageNum
+     * @param pageSize
      * @return
      */
-    public DataGridView queryAllMenu(MenuVo menuVo);
+    DataGridView queryAllMenu(Integer pageNum,Integer pageSize,MenuVo menuVo);
 
     /**
      * 添加菜单
      * @param menuVo
      */
-    public void addMenu(MenuVo menuVo);
+    void addMenu(MenuVo menuVo);
 
     /**
      * 修改菜单
      * @param menuVo
      */
-    public void updateMenu(MenuVo menuVo);
+    void updateMenu(MenuVo menuVo);
 
     /**
      * 根据pid查询菜单数量
      * @param pid
      * @return
      */
-    public Integer queryMenuByPid(Integer pid);
+    Integer queryMenuByPid(Integer pid);
 
     /**
      * 根据id删除菜单
      * @param menuVo
      */
-    public void deleteMenu(MenuVo menuVo);
+    void deleteMenu(MenuVo menuVo);
 }

@@ -20,4 +20,17 @@ public class Menu {
 
     private Integer available;
 
+    public Menu() {
+    }
+
+    public Menu(Integer id, Integer pid, String title, String href, Integer spread, String target, String icon, Integer available) {
+        this.id = id;
+        this.pid = pid;
+        this.title = title;
+        this.href = href;
+        this.spread = spread;
+        this.target = target;
+        this.icon = icon;
+        this.available = available;
+    }
 }

@@ -11,6 +11,7 @@ import com.iweb.o2o.utils.DataGridView;
 import com.iweb.o2o.vo.NewsVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.util.Arrays;
 import java.util.List;
@@ -29,6 +30,21 @@ public class NewsServiceImpl implements NewsService {
     public DataGridView queryAllNews(NewsVo newsVo) {
         PageHelper.startPage(newsVo.getPage(),newsVo.getLimit());
         QueryWrapper<News> queryWrapper = new QueryWrapper<>();
+        //封装查询条件
+        if(!StringUtils.isEmpty(newsVo.getTitle())) {
+            queryWrapper.like("title",newsVo.getTitle());
+        }
+        if(!StringUtils.isEmpty(newsVo.getContent())) {
+            queryWrapper.like("content",newsVo.getContent());
+        }
+        if(!StringUtils.isEmpty(newsVo.getStartTime())) {
+            queryWrapper.ge("createtime",newsVo.getStartTime());
+        }
+
+        if(!StringUtils.isEmpty(newsVo.getEndTime())) {
+            queryWrapper.le("createtime",newsVo.getEndTime());
+        }
+        queryWrapper.orderByDesc("createtime");
         List<News> news = newsMapper.selectList(queryWrapper);
         PageInfo<LogLogin> pageInfo = new PageInfo<>();
         DataGridView<News> dataGridView = new DataGridView<>();

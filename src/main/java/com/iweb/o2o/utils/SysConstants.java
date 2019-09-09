@@ -7,6 +7,23 @@ package com.iweb.o2o.utils;
  * 定义接口的目的：是可以省略public  static final
  */
 public interface SysConstants {
+    /**
+     * 公用常量
+     */
+    Integer CODE_ZERO = 0;
+    Integer CODE_ONE = 1;
+    Integer CODE_TWO = 2;
+    Integer CODE_THREE = 3;
+    /**
+     * 默认密码配置
+     */
+    String USER_DEFAULT_PWD = "123456";
+    /**
+     * 用户类型,我们这里省略了
+     */
+    Integer USER_TYPE_SUPER = 1;
+    Integer USER_TYPE_NORMAL= 2;
+
     String USER_ERROR = "用户名或密码错误";
 
     String CODE_ERROR = "验证码错误";
@@ -14,6 +31,7 @@ public interface SysConstants {
     String SESSION_USER = "user";
 
     String PERSON_INFO = "personInfo";
+
     /**
      * 临时文件标记
      */
@@ -50,4 +68,12 @@ public interface SysConstants {
 
     Integer CODE_SUCCESS=0; //操作成功
     Integer CODE_FAILER=-1;//失败
+
+    /*可用状态*/
+    Integer AVAILABLE_TRUE = 1;
+    Integer AVAILABLE_FALSE = 0;
+
+    /*是否展开*/
+    Integer SPREAD_TRUE = 1;
+    Integer SPREAD_FALSE = 0;
 }

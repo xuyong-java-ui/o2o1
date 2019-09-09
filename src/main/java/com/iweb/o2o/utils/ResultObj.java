@@ -38,6 +38,31 @@ public class ResultObj {
     public static final ResultObj UPDATE_ERROR=new ResultObj(SysConstants.CODE_FAILER, SysConstants.UPDATE_ERROR);
     public static final ResultObj UPDATE_SUCCESS=new ResultObj(SysConstants.CODE_SUCCESS, SysConstants.UPDATE_SUCCESS);
 
+    /**
+     * 重置成功
+     */
+    public static final ResultObj RESET_SUCCESS=new ResultObj(SysConstants.CODE_SUCCESS, SysConstants.RESET_SUCCESS);
+    /**
+     * 重置失败
+     */
+    public static final ResultObj RESET_ERROR=new ResultObj(SysConstants.CODE_FAILER, SysConstants.RESET_ERROR);
+    /**
+     * 分配成功
+     */
+    public static final ResultObj DISPATCH_SUCCESS=new ResultObj(SysConstants.CODE_SUCCESS, SysConstants.DISPATCH_SUCCESS);
+    /**
+     * 分配失败
+     */
+    public static final ResultObj DISPATCH_ERROR=new ResultObj(SysConstants.CODE_FAILER, SysConstants.DISPATCH_ERROR);
+
+    /**
+     * 状态码0
+     */
+    public static final ResultObj STATUS_TRUE=new ResultObj(SysConstants.CODE_SUCCESS);
+    /**
+     * 状态码-1
+     */
+    public static final ResultObj STATUS_FALSE=new ResultObj(SysConstants.CODE_FAILER);
     private ResultObj(Integer code, String msg) {
         super();
         this.code = code;
